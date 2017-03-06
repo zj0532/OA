@@ -1,0 +1,7 @@
+D:\Project\统一办公平台\源代码\OASys\DAL\bin\Release\DAL.dll
+D:\Project\统一办公平台\源代码\OASys\DAL\bin\Release\DAL.pdb
+D:\Project\统一办公平台\源代码\OASys\DAL\bin\Release\MDL.dll
+D:\Project\统一办公平台\源代码\OASys\DAL\bin\Release\MDL.pdb
+D:\Project\统一办公平台\源代码\OASys\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+D:\Project\统一办公平台\源代码\OASys\DAL\obj\Release\DAL.dll
+D:\Project\统一办公平台\源代码\OASys\DAL\obj\Release\DAL.pdb

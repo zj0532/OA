@@ -1,0 +1,17 @@
+D:\Project\统一办公平台\源代码\OASys\OASys\bin\OASys.dll.config
+D:\Project\统一办公平台\源代码\OASys\OASys\bin\OASys.dll
+D:\Project\统一办公平台\源代码\OASys\OASys\bin\OASys.pdb
+D:\Project\统一办公平台\源代码\OASys\OASys\bin\BLL.dll
+D:\Project\统一办公平台\源代码\OASys\OASys\bin\CuteEditor.dll
+D:\Project\统一办公平台\源代码\OASys\OASys\bin\CuteEditor.ImageEditor.dll
+D:\Project\统一办公平台\源代码\OASys\OASys\bin\MDL.dll
+D:\Project\统一办公平台\源代码\OASys\OASys\bin\NPOI.dll
+D:\Project\统一办公平台\源代码\OASys\OASys\bin\DAL.dll
+D:\Project\统一办公平台\源代码\OASys\OASys\bin\ICSharpCode.SharpZipLib.dll
+D:\Project\统一办公平台\源代码\OASys\OASys\bin\BLL.pdb
+D:\Project\统一办公平台\源代码\OASys\OASys\bin\MDL.pdb
+D:\Project\统一办公平台\源代码\OASys\OASys\bin\NPOI.xml
+D:\Project\统一办公平台\源代码\OASys\OASys\bin\DAL.pdb
+D:\Project\统一办公平台\源代码\OASys\OASys\obj\Release\OASys.csprojResolveAssemblyReference.cache
+D:\Project\统一办公平台\源代码\OASys\OASys\obj\Release\OASys.dll
+D:\Project\统一办公平台\源代码\OASys\OASys\obj\Release\OASys.pdb

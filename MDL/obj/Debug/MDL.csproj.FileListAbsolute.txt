@@ -1,0 +1,15 @@
+D:\Project\统一办公平台\源代码\OASys\MDL\bin\Debug\MDL.dll
+D:\Project\统一办公平台\源代码\OASys\MDL\bin\Debug\MDL.pdb
+D:\Project\统一办公平台\源代码\OASys\MDL\obj\Debug\MDL.dll
+D:\Project\统一办公平台\源代码\OASys\MDL\obj\Debug\MDL.pdb
+D:\Project\统一办公平台\源代码\OASys\MDL\obj\Debug\MDL.csprojResolveAssemblyReference.cache
+E:\OaSource\OASys\MDL\bin\Debug\MDL.dll
+E:\OaSource\OASys\MDL\bin\Debug\MDL.pdb
+E:\OaSource\OASys\MDL\obj\Debug\MDL.csprojResolveAssemblyReference.cache
+E:\OaSource\OASys\MDL\obj\Debug\MDL.dll
+E:\OaSource\OASys\MDL\obj\Debug\MDL.pdb
+E:\工作文档\工作交接内容\OaSource(最新修改)\2015-12-23\MDL\bin\Debug\MDL.dll
+E:\工作文档\工作交接内容\OaSource(最新修改)\2015-12-23\MDL\bin\Debug\MDL.pdb
+E:\工作文档\工作交接内容\OaSource(最新修改)\2015-12-23\MDL\obj\Debug\MDL.dll
+E:\工作文档\工作交接内容\OaSource(最新修改)\2015-12-23\MDL\obj\Debug\MDL.pdb
+E:\工作文档\工作交接内容\OaSource(最新修改)\2015-12-23\MDL\obj\Debug\MDL.csprojResolveAssemblyReference.cache

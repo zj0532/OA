@@ -1,0 +1,44 @@
+*{
+	font-size:12px;
+}
+body {
+    font-family:helvetica,tahoma,verdana,sans-serif;
+    padding:20px;
+    font-size:13px;
+    margin:0;
+}
+h2 {
+    font-size:18px;
+    font-weight:bold;
+    margin:0;
+    margin-bottom:15px;
+}
+.demo-info{
+	background:#FFFEE6;
+	color:#8F5700;
+	padding:12px;
+}
+.demo-tip{
+	width:16px;
+	height:16px;
+	margin-right:8px;
+	float:left;
+}
+
+
+.a1:link {
+color:##3366FF;
+text-decoration:none;
+}
+.a1:visited {
+color:#3366FF;
+text-decoration:none;
+}
+.a1:hover {
+color:#000000;
+text-decoration:none;
+}
+.a1:active {
+color:#FFFFFF;
+text-decoration:none;
+} 

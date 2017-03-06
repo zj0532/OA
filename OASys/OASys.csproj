@@ -1,0 +1,2615 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D202C9ED-5A2F-4519-9E05-622AA7FD369E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OASys</RootNamespace>
+    <AssemblyName>OASys</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CuteEditor, Version=6.7.0.0, Culture=neutral, PublicKeyToken=3858aa6802b1223a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\DoNetCtrl\cuteEditor\bin\CuteEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="CuteEditor.ImageEditor">
+      <HintPath>..\..\..\..\..\DoNetCtrl\cuteEditor\bin\CuteEditor.ImageEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NPOI">
+      <HintPath>..\..\..\..\..\DoNetCtrl\NPOI 2.1.1\dotnet4\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ashx\Plan\GetPlanByWPIDHandler.ashx" />
+    <Content Include="common\verify_code.aspx" />
+    <Content Include="Control\ButtonCtrl.ascx" />
+    <Content Include="Control\GetViCode.aspx" />
+    <Content Include="Css\alogin.css" />
+    <Content Include="Css\default.css" />
+    <Content Include="Css\default\images\Thumbs.db" />
+    <Content Include="Css\demo.css" />
+    <Content Include="Css\icons\back.png" />
+    <Content Include="Css\icons\blank.gif" />
+    <Content Include="Css\icons\cancel.png" />
+    <Content Include="Css\icons\cut.png" />
+    <Content Include="Css\icons\edit_add.png" />
+    <Content Include="Css\icons\edit_remove.png" />
+    <Content Include="Css\icons\filesave.png" />
+    <Content Include="Css\icons\filter.png" />
+    <Content Include="Css\icons\help.png" />
+    <Content Include="Css\icons\mini_add.png" />
+    <Content Include="Css\icons\mini_edit.png" />
+    <Content Include="Css\icons\mini_refresh.png" />
+    <Content Include="Css\icons\no.png" />
+    <Content Include="Css\icons\ok.png" />
+    <Content Include="Css\icons\pencil.png" />
+    <Content Include="Css\icons\print.png" />
+    <Content Include="Css\icons\redo.png" />
+    <Content Include="Css\icons\reload.png" />
+    <Content Include="Css\icons\search.png" />
+    <Content Include="Css\icons\sum.png" />
+    <Content Include="Css\icons\tip.png" />
+    <Content Include="Css\icons\undo.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Clean.htm" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\colorpicker.aspx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\colorpicker_basic.aspx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\colorpicker_more.aspx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\colorpicker_more_ie.aspx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\colorpicker_more_ns.aspx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Find.htm" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Gecko_InsertChars.htm" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\gecko_pasteashtml.htm" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\gecko_pastetext.htm" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\gecko_pasteword.htm" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\htc.htc" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\ImageMap.htm" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\InsertAnchor.htm" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\InsertChars.htm" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\InsertDocument.aspx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\InsertEmotion.htm" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\InsertFlash.aspx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\InsertGallery.aspx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\InsertImage.aspx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\InsertMedia.aspx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\InsertTemplate.aspx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\MapLink.htm" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\outereditorfull.aspx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Page.htm" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Preview.htm" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\SelectFile.aspx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\SelectImage.aspx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\SyntaxHighlighter.htm" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Tag.aspx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Tag\tag_a.ascx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Tag\tag_common.ascx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Tag\tag_div.ascx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Tag\tag_flash.ascx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Tag\tag_form.ascx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Tag\tag_hr.ascx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Tag\tag_image.ascx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Tag\tag_input.ascx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Tag\tag_inserttable.ascx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Tag\Tag_li.ascx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Tag\tag_media.ascx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Tag\tag_select.ascx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Tag\tag_style.ascx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Tag\tag_style_background.ascx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Tag\tag_style_border.ascx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Tag\tag_style_font.ascx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Tag\tag_style_layout.ascx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Tag\tag_style_list.ascx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Tag\tag_style_other.ascx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Tag\tag_style_text.ascx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Tag\tag_table.ascx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Tag\tag_td.ascx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Tag\tag_textarea.ascx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Tag\tag_tr.ascx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Tag\tag__template.ascx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\ThumbList.ascx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Thumbnail.aspx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\UniversalKeyboard.aspx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\xbl.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\YouTube.aspx" />
+    <Content Include="CuteSoft_Client\CuteEditor\flashplayer.swf" />
+    <Content Include="CuteSoft_Client\CuteEditor\Help\default.htm" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\cuteeditor_imageeditor.js.aspx" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\imageeditor.aspx" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\imageeditorTest.aspx" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\imageeditor_showimage.aspx" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\Actualsize.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\AquariumPen.cur" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\bestfit.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\bold.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\clear.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\colorpen.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\copy.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\crop.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\dot.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\drawellipse.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\drawline.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\drawrectangle.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\drawtransparentellipse.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\drawtransparentrectangle.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\droparrow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\erase.cur" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\erase.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\filphorizontal.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\filpvertical.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\italic.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\leftline.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\locked.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\new.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\open.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\paste.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\pasteword.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\pen.cur" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\pen.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\pen_m.cur" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\redo.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\reload.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\resize.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\rightline.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\rotate.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\rotateleft90.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\rotateright90.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\save.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\select.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\SpacePen.cur" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\text.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\timer.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\under.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\undo.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\zoomin.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Images\zoomout.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\listfiles.aspx" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Symbols\sample1.jpg" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Symbols\sample2.jpg" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Symbols\sample3.jpg" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Symbols\sample4.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\Symbols\sample5.jpg" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\TempFiles\079ec801-d25c-44a6-a9b7-d916228612a2000001.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\TempFiles\079ec801-d25c-44a6-a9b7-d916228612a2000002-.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\TempFiles\15185660-3018-47b8-8d52-4d203e415bb1000001.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\TempFiles\15185660-3018-47b8-8d52-4d203e415bb1000002.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\TempFiles\15185660-3018-47b8-8d52-4d203e415bb1000003-.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\TempFiles\3dd85e0a-ac1f-4a41-afbf-80b2f4e0b96b000001.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\TempFiles\3dd85e0a-ac1f-4a41-afbf-80b2f4e0b96b000002.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\TempFiles\3dd85e0a-ac1f-4a41-afbf-80b2f4e0b96b000003.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\TempFiles\3dd85e0a-ac1f-4a41-afbf-80b2f4e0b96b000004-.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\TempFiles\91b51b14-6455-41fc-abb4-0a164d6196c7000001.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\TempFiles\91b51b14-6455-41fc-abb4-0a164d6196c7000002-.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\TempFiles\a7ca51b4-fdd9-4cfb-8f05-93fe3625b144000001.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\TempFiles\a7ca51b4-fdd9-4cfb-8f05-93fe3625b144000002-.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\xmllib.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\1x1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\Accessibility.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\Actualsize.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\all.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\anchor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\area.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\arj.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\arrow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\asa.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\asax.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\ascx.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\asmx.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\asp.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\aspx.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\au.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\avi.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\a_template.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\backward.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\bat.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\bestfit.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\blank2020.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\blank2020.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\bmp.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\bold.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\border_bottom.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\border_left.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\border_none.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\border_outside.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\border_right.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\border_top.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\box.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\break.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\bspreview.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\bullet.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\bullist.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\buttons.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\cab.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\center.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\checkbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\chm.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\cleanup.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\clear.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\close.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\closedfolder.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\code.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\codedropdown.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\colorfocus.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\colorpen.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\colorpicker.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\com.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\config.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\contact.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\copy.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\cpie_Color.cur" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\cpie_GradientPositionDark.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\cpie_GradientPositionLight.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\cpie_gradients.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\cpie_VerticalPosition.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\cpie_WebSafe.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\cpns_Color.cur" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\cpns_ColorSpace1.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\cpns_ColorSpace2.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\cpns_GradientPositionDark.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\cpns_GradientPositionLight.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\cpns_gradients.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\cpns_hue2.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\cpns_Vertical1.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\cpns_Vertical2.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\cpns_VerticalPosition.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\cpns_WebSafe.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\cs.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\css.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\cssclass.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\cssstyle.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\cut.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\delete.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\delrow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\design.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\disco.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\dll.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\doc.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\document.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\docx.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\download.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\drop-arrow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\dropdownbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\edit.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\edit2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emangel.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emangry.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\embeer.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emcake.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emcat.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emclock.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emcocktl.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emcrook.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emcry.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emdgust.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emdog.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\ememail.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emembarrassed.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emfemale.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emfilm.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emfist.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emgift.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emhot.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emhug.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emhug2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emidea.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emkulou.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emlips.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emlove.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emmale.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emmessag.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emmoon.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emnote.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emotion.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emphone.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emphoto.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emquestion.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emrainbow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emrose.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emrosesad.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emsad.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emsmile.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emsmiled.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emsmileo.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emsmilep.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emstar.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emtea.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emteeth.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emthdown.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emthup.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emunlove.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emvamp.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\emwink.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\exe.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\eximage.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\face1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\face10.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\face11.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\face12.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\face13.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\face14.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\face15.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\face16.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\face17.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\face18.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\face19.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\face2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\face20.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\face21.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\face22.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\face23.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\face24.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\face3.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\face4.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\face5.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\face6.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\face7.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\face8.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\face9.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\flash.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\flash32.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\flv.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\fontcolor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\fontdropdown.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\fontend.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\Form.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\formbg.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\formbg2.bmp" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\formbg2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\formbn.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\forward.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\gif.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\h-f-3Columns-Body.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\h-l-tr-Body.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\h-R-t-Body.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\help.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\hiddenfield.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\hlp.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\horizontal.background.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\horizontal.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\horizontal.start.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\htm.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\html.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\htmlview.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\icon-info.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\image.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\imagebutton.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\imagedropdown.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\imageeditor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\ImageMap.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\Images1x1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\img.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\inc.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\ini.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\insertDate.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\italic.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\jpeg.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\jpg.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\justifyfull.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\justifynone.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\keyboard.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\layer.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\layout.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\lcase.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\left-corners.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\left.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\lightblue_colorpen.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\lightblue_fontcolor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\link.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\linkdropdown.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\listbar.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\locked.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\log.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\mdb.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\media.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\menuleft.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\mid.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\midi.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\mov.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\move.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\mp3.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\mpeg.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\mpg.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\multiclavier.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\new.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\newfolder.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\newtemplate.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\noneditable.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\One-Column-Table.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\open.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\openfolder.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\optionbutton.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\outdent.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\page.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\paragraph.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\paragraphdropdown.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\parentfolder.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\passwordfield.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\paste.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\pastetext.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\pasteword.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\pdf.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\png.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\ppt.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\print.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\rar.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\refresh.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\reload.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\resize.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\resizecell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\ResizeCorner.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\restore.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\right.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\right_to_left.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\row.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\rtf.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\rule.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\save.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\signature.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\sizedropdown.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\space.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\spanend.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\standardtoolbar.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\style.Background.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\style.Border.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\style.font.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\style.Layout.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\style.List.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\style.Other.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\style.Text.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\swf.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\sys.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\s_cut.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\s_refresh.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\t-minus.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\t-plus.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\tab-bg.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\table.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\tbdown.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\template.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\Three-Column-Table.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\tif.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\timer.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\Two-Column-Table.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\txt.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\ucase.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\under.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\undo.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\unknown.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\vb.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\vbs.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\vsdisco.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\wav.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\wmv.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\wri.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\xls.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\xlsx.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\xml.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\youtube.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\zip.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\zoom.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\zoomin.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\zoomout.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\zoom_in.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Images\zoom_out.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\ar.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\cs.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\da-DK.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\da.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\de-de.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\en-CA.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\en-en.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\en-GB.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\en-US.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\en-ZA.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\es-ES.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\fr-CA.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\fr-FR.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\he-IL.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\hu.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\it-IT.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\ja-JP.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\ko-KR.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\Ko.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\Languages.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\nb-NO.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\nl-NL.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\pt-BR.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\ru-RU.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\sv-SE.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\th.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\tr-tr.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\vi-vn.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\vi.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\zh-cn.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\zh-SG.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\zh-tw.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Languages\_default.xml" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\ColorPicker.htc" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\ColorPicker.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Constant.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\DatePicker.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\DialogFoot.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\DialogHead.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Clean.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_ColorPicker.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_ColorPicker_IE.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_ColorPicker_NS.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Find.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_gallery_spring.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_gecko_pastehtml.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_gecko_pastetext.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_gecko_pasteword.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_ImageMap.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_InsertAnchor.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_InsertChars.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_InsertDocument.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_InsertEmotion.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_InsertFlash.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_InsertGallery.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_InsertImage.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_InsertMedia.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_InsertTemplate.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Keyboard.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_MapLink.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Page.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Preview.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_SelectFile.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_SelectImage.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_TagFoot.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_TagHead.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Tag_A.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Tag_Common.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Tag_Div.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Tag_Flash.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Tag_Form.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Tag_Hr.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Tag_Image.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Tag_Input.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Tag_InsertTable.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Tag_Li.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Tag_Media.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Tag_Select.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Tag_Span.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Tag_Style.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Tag_Style_Background.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Tag_Style_Border.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Tag_Style_Font.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Tag_Style_Layout.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Tag_Style_Text.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Tag_Table.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Tag_Td.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Tag_Textarea.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_Tag_Tr.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Dialog\Dialog_YouTube.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Gecko_Implementation\CuteEditorImplementation.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Gecko_Loader\Loader.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\IE_Implementation\CuteEditorImplementation.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\IE_Loader\Loader.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Keyboard\keyboard-data.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Keyboard\keyboard-diacritic.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Keyboard\keyboard-dialogue.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Keyboard\keyboard-multihexa.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Opera_Implementation\CuteEditorImplementation.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Opera_Loader\Loader.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Safari12_Implementation\CuteEditorImplementation.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Safari12_Loader\Loader.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Safari_Loader\Loader.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\Safar_Implementation\CuteEditorImplementation.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\spell.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\SyntaxHighlighter\shBrushCpp.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\SyntaxHighlighter\shBrushCSharp.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\SyntaxHighlighter\shBrushCss.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\SyntaxHighlighter\shBrushDelphi.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\SyntaxHighlighter\shBrushJava.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\SyntaxHighlighter\shBrushJScript.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\SyntaxHighlighter\shBrushPhp.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\SyntaxHighlighter\shBrushPython.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\SyntaxHighlighter\shBrushRuby.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\SyntaxHighlighter\shBrushSql.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\SyntaxHighlighter\shBrushVb.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\SyntaxHighlighter\shBrushXml.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\SyntaxHighlighter\shCore.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\Scripts\SyntaxHighlighter\_shCore.js" />
+    <Content Include="CuteSoft_Client\CuteEditor\SpellCheck.aspx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Style\ColorPicker_IE.css" />
+    <Content Include="CuteSoft_Client\CuteEditor\Style\ColorPicker_NS.css" />
+    <Content Include="CuteSoft_Client\CuteEditor\Style\IE.css" />
+    <Content Include="CuteSoft_Client\CuteEditor\Style\spell.css" />
+    <Content Include="CuteSoft_Client\CuteEditor\Style\SyntaxHighlighter.css" />
+    <Content Include="CuteSoft_Client\CuteEditor\Style\ToggleBorder.css" />
+    <Content Include="CuteSoft_Client\CuteEditor\Template.aspx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\dialog.css" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\abspos.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\all.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\anchor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\b1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\b1.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\BackColor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\backward.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\bg.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\bold.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\borders.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\box.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\break.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\bspreview.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\bullist.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\cell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\center.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\checkbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\cleanup.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\close.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\Close2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\code.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\codeeditor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\colorpen.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\copy.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\cut.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\delcell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\delcol.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\delete.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\delrow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\design.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\document.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\droparrow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\dropdownbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\EditInNewWindow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\emotion.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\eximage.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\Express.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\find.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\fit.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\flash.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\fontcolor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\ForeColor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\Form.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\forward.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\groupbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\help.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\hiddenfield.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\horizontal.background.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\htmlview.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\image.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\imagebutton.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\ImageMap.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\indent.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\inscell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\inscol.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\inscol_l.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\inscol_r.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\insertDate.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\insertform.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\InsertPageBreak.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\insrow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\insrow_b.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\insrow_t.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\instable.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\italic.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\justifyfull.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\justifynone.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\keyboard.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\l1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\l1.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\l2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\l2.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\layer.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\lcase.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\left.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\left_to_right.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\lightblue_colorpen.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\lightblue_fontcolor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\link.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\listbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\media.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\minus.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\mrgcell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\mrgcell_b.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\mrgcell_r.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\newdoc.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\noneditable.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\numlist.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\optionbutton.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\outdent.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\page.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\paragraph.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\passwordfield.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\paste.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\PasteAsHtml.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\pastetext.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\pasteword.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\plus.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\preview.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\print.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\pushbutton.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\r1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\r1.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\r2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\r2.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\redo.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\reset.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\restore.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\right.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\right_to_left.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\row.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\rule.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\save.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\selectall.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\selectnone.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\Separator.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\specialchar.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\spell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\spltcell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\spltcell_b.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\spltcell_r.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\strike.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\submit.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\subscript.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\superscript.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\t1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\t1.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\t2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\t2.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\t3.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\t3.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\table.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\tbdown.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\template.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\text.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\textarea.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\textbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\timer.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\toolbarbutton.over.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\ucase.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\under.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\undo.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\unformat.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\unlink.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\Untitled-1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\Untitled-2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\Images\youtube.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Custom\style.css" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\dialog.css" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\abspos.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\all.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\anchor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\b1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\b1.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\BackColor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\backward.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\bold.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\borders.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\box.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\break.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\bspreview.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\bullist.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\cell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\center.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\checkbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\chm.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\cleanup.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\close.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\Close2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\closedfolder.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\code.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\codeeditor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\colorpen.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\colorpicker.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\copy.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\cut.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\delcell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\delcol.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\delete.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\delrow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\design.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\details.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\document.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\doubleline.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\download.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\droparrow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\dropdownbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\edit.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\EditInNewWindow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\emotion.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\emteeth.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\emthdown.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\eximage.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\Express.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\find.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\fit.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\flash.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\fontcolor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\ForeColor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\Form.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\forward.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\fpreview.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\f_bold.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\f_under.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\Gecko_horizontal.end.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\Gecko_horizontal.start.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\groupbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\help.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\hiddenfield.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\horizontal.background.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\horizontal.end.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\horizontal.start.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\htmlview.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\image.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\imagebutton.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\ImageMap.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\inc.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\indent.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\ini.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\inscell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\inscol.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\inscol_l.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\inscol_r.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\insertDate.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\insertform.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\InsertPageBreak.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\insrow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\insrow_b.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\insrow_t.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\instable.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\italic.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\jpeg.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\jpg.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\justifyfull.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\justifynone.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\keyboard.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\l1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\l1.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\l2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\l2.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\layer.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\lcase.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\left.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\left_to_right.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\lightblue_colorpen.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\lightblue_fontcolor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\link.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\listbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\log.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\media.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\menuleft.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\mid.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\midi.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\minus.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\mov.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\mp3.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\mpeg.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\mpg.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\mrgcell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\mrgcell_b.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\mrgcell_r.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\newdoc.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\noneditable.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\numlist.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\open.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\openfolder.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\optionbutton.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\outdent.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\page.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\paragraph.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\parentfolder.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\passwordfield.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\paste.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\pasteAsHTML.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\pastetext.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\pasteword.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\plus.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\preview.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\print.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\pushbutton.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\r1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\r1.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\r2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\r2.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\redo.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\reset.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\restore.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\right.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\right_to_left.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\row.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\rule.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\save.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\selectall.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\selectnone.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\Separator.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\snapgrid.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\specialchar.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\spell.css.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\spell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\spltcell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\spltcell_b.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\spltcell_r.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\strike.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\submit.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\subscript.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\superscript.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\swf.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\t1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\t1.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\t2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\t2.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\t3.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\t3.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\table.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\tbdown.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\template.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\text.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\textarea.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\textbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\timer.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\toolbarbutton.over.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\ucase.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\under.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\undo.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\unformat.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\unlink.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\Images\youtube.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2000\style.css" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\dialog.css" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\abspos.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\all.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\anchor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\arrow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\b1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\b1.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\BackColor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\backward.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\bg.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\bold.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\borders.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\box.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\break.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\bspreview.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\bullist.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\cell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\center.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\checkbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\cleanup.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\Close2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\code.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\codeeditor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\colorpen.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\copy.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\cut.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\delcell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\delcol.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\delete.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\delrow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\design.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\document.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\droparrow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\dropdownbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\EditInNewWindow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\emotion.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\eximage.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\Express.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\find.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\fit.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\flash.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\fontcolor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\ForeColor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\Form.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\formbg.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\forward.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\groupbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\help.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\hiddenfield.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\horizontal.background.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\horizontal.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\horizontal.start.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\htmlview.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\image.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\imagebutton.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\ImageMap.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\indent.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\inscell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\inscol.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\inscol_l.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\inscol_r.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\insertDate.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\insertform.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\InsertPageBreak.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\insrow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\insrow_b.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\insrow_t.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\instable.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\italic.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\justifyfull.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\justifynone.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\keyboard.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\l1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\l1.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\l2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\l2.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\layer.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\lcase.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\left.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\left_to_right.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\lightblue_colorpen.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\lightblue_fontcolor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\link.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\listbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\media.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\menuleft.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\minus.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\mrgcell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\mrgcell_b.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\mrgcell_r.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\newdoc.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\noneditable.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\numlist.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\optionbutton.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\outdent.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\page.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\paragraph.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\passwordfield.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\paste.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\PasteAsHtml.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\pastetext.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\pasteword.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\plus.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\preview.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\print.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\pushbutton.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\r1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\r1.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\r2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\r2.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\redo.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\reset.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\restore.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\right.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\right_to_left.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\row.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\rule.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\save.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\selectall.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\selectnone.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\Separator.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\specialchar.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\spell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\spltcell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\spltcell_b.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\spltcell_r.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\strike.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\submit.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\subscript.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\superscript.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\t1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\t1.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\t2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\t2.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\t3.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\t3.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\table.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\tbdown.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\template.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\text.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\textarea.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\textbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\timer.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\toolbarbutton.over.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\ucase.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\under.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\undo.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\unformat.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\unlink.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\Images\youtube.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003\style.css" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\dialog.css" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\abspos.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\all.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\anchor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\b1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\b1.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\BackColor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\backward.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\bold.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\borders.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\box.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\break.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\bspreview.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\bullist.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\cell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\center.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\checkbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\cleanup.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\close.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\Close2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\code.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\codeeditor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\colorpen.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\copy.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\cut.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\delcell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\delcol.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\delete.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\delrow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\design.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\document.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\droparrow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\dropdownbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\EditInNewWindow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\emotion.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\eximage.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\Express.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\find.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\fit.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\flash.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\fontcolor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\ForeColor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\Form.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\forward.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\Gecko_horizontal.end.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\Gecko_horizontal.start.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\groupbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\help.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\hiddenfield.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\horizontal.background.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\horizontal.end.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\horizontal.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\horizontal.start.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\htmlview.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\image.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\imagebutton.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\ImageMap.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\indent.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\inscell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\inscol.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\inscol_l.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\inscol_r.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\insertDate.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\insertform.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\InsertPageBreak.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\insrow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\insrow_b.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\insrow_t.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\instable.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\italic.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\justifyfull.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\justifynone.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\keyboard.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\l1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\l1.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\l2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\l2.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\layer.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\lcase.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\left.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\left_to_right.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\link.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\listbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\media.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\menuleft.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\minus.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\mrgcell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\mrgcell_b.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\mrgcell_r.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\newdoc.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\noneditable.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\numlist.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\optionbutton.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\outdent.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\page.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\paragraph.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\passwordfield.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\paste.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\PasteAsHtml.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\pastetext.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\pasteword.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\plus.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\preview.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\print.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\pushbutton.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\r1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\r1.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\r2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\r2.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\redo.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\reset.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\restore.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\right.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\right_to_left.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\row.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\rule.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\save.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\selectall.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\selectnone.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\Separator.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\specialchar.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\spell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\spltcell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\spltcell_b.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\spltcell_r.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\strike.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\submit.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\subscript.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\superscript.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\t1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\t1.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\t2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\t2.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\t3.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\t3.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\table.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\tbdown.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\template.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\text.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\textarea.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\textbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\timer.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\toolbarbutton.over.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\ucase.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\under.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\undo.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\unformat.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\unlink.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\Images\youtube.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2003_BlueTheme\style.css" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\dialog.css" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\abspos.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\all.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\anchor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\b1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\b1.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\BackColor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\backward.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\bg.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\bold.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\borders.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\box.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\break.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\bspreview.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\bullist.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\cell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\center.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\checkbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\cleanup.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\close.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\Close2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\code.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\codeeditor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\colorpen.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\copy.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\cut.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\delcell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\delcol.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\delete.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\delrow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\design.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\document.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\droparrow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\dropdownbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\EditInNewWindow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\emotion.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\eximage.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\Express.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\find.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\fit.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\flash.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\fontcolor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\ForeColor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\Form.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\forward.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\groupbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\help.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\hiddenfield.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\horizontal.background.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\horizontal.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\htmlview.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\image.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\imagebutton.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\ImageMap.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\indent.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\inscell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\inscol.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\inscol_l.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\inscol_r.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\insertDate.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\insertform.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\InsertPageBreak.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\insrow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\insrow_b.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\insrow_t.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\instable.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\italic.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\justifyfull.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\justifynone.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\keyboard.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\l1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\l1.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\l2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\l2.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\layer.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\lcase.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\left.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\left_to_right.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\lightblue_colorpen.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\lightblue_fontcolor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\link.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\listbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\media.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\minus.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\mrgcell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\mrgcell_b.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\mrgcell_r.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\newdoc.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\noneditable.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\numlist.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\optionbutton.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\outdent.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\page.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\paragraph.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\passwordfield.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\paste.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\PasteAsHtml.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\pastetext.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\pasteword.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\plus.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\preview.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\print.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\pushbutton.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\r1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\r1.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\r2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\r2.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\redo.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\reset.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\restore.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\right.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\right_to_left.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\row.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\rule.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\save.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\selectall.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\selectnone.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\Separator.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\specialchar.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\spell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\spltcell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\spltcell_b.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\spltcell_r.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\strike.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\submit.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\subscript.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\superscript.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\t1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\t1.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\t2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\t2.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\t3.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\t3.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\table.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\tbdown.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\template.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\text.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\textarea.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\textbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\timer.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\toolbarbutton.over.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\ucase.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\under.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\undo.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\unformat.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\unlink.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\Images\youtube.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\Office2007\style.css" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\dialog.css" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\abspos.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\all.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\anchor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\b1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\b1.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\BackColor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\backward.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\bold.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\borders.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\box.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\break.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\bspreview.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\bullist.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\cell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\center.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\checkbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\chm.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\cleanup.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\close.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\Close2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\closedfolder.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\code.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\codeeditor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\colorpen.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\colorpicker.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\copy.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\cut.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\delcell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\delcol.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\delete.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\delrow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\design.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\details.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\document.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\doubleline.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\droparrow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\dropdownbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\edit.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\EditInNewWindow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\emotion.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\eximage.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\Express.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\find.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\fit.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\flash.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\fontcolor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\ForeColor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\Form.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\forward.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\fpreview.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\f_bold.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\f_under.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\Gecko_horizontal.end.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\Gecko_horizontal.start.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\groupbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\help.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\hiddenfield.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\horizontal.end.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\horizontal.start.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\htmlview.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\image.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\imagebutton.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\ImageMap.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\inc.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\indent.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\ini.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\inscell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\inscol.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\inscol_l.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\inscol_r.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\insertDate.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\insertform.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\InsertPageBreak.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\insrow.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\insrow_b.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\insrow_t.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\instable.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\italic.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\justifyfull.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\justifynone.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\keyboard.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\l1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\l1.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\l2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\l2.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\layer.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\lcase.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\left.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\left_to_right.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\lightblue_colorpen.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\lightblue_fontcolor.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\link.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\listbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\log.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\media.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\menuleft.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\mid.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\midi.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\minus.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\mov.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\mp3.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\mpeg.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\mpg.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\mrgcell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\mrgcell_b.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\mrgcell_r.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\newdoc.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\noneditable.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\numlist.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\open.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\openfolder.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\optionbutton.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\outdent.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\page.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\paragraph.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\passwordfield.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\paste.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\pasteAsHTML.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\pastetext.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\pasteword.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\plus.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\preview.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\print.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\pushbutton.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\r1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\r1.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\r2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\r2.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\redo.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\reset.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\restore.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\right.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\right_to_left.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\row.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\rule.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\save.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\selectall.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\selectnone.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\Separator.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\snapgrid.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\specialchar.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\spell.css.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\spell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\spltcell.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\spltcell_b.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\spltcell_r.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\strike.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\submit.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\subscript.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\superscript.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\swf.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\t1.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\t1.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\t2.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\t2.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\t3.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\t3.png" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\table.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\tbdown.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\template.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\text.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\textarea.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\textbox.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\timer.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\ucase.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\under.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\undo.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\unformat.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\unlink.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\Images\youtube.gif" />
+    <Content Include="CuteSoft_Client\CuteEditor\Themes\OfficeXp\style.css" />
+    <Content Include="FileManager\AddAndMeet.aspx" />
+    <Content Include="FileManager\AddImportant.aspx" />
+    <Content Include="FileManager\AddReport.aspx" />
+    <Content Include="FileManager\AddStandard.aspx" />
+    <Content Include="FileManager\AddTechnical.aspx" />
+    <Content Include="FileManager\Important.aspx" />
+    <Content Include="FileManager\ImportantShow.aspx" />
+    <Content Include="FileManager\MeetShow.aspx" />
+    <Content Include="FileManager\MeetSummary.aspx" />
+    <Content Include="FileManager\Standard.aspx" />
+    <Content Include="FileManager\StandardList.aspx" />
+    <Content Include="FileManager\StandardShow.aspx" />
+    <Content Include="FileManager\Technical.aspx" />
+    <Content Include="FileManager\TechnicalList.aspx" />
+    <Content Include="FileManager\WeeklyReport.aspx" />
+    <Content Include="FileManager\WeeklyReportList.aspx" />
+    <Content Include="HrManager\AddPlanWrok.aspx" />
+    <Content Include="HrManager\AddressList.aspx" />
+    <Content Include="HrManager\AttendanceCheck.aspx" />
+    <Content Include="HrManager\AuthorityManager.aspx" />
+    <Content Include="HrManager\HolidayAuditing.aspx" />
+    <Content Include="HrManager\HolidayHistory.aspx" />
+    <Content Include="HrManager\HolidayManager.aspx" />
+    <Content Include="HrManager\MdyPlanWrok.aspx" />
+    <Content Include="HrManager\NewEmployeeKnowAdd.aspx" />
+    <Content Include="HrManager\NewEmployeeKnowGroup.aspx" />
+    <Content Include="HrManager\NewEmployeeShow.aspx" />
+    <Content Include="HrManager\PlanWorkApply.aspx" />
+    <Content Include="HrManager\PlanWorkAudited.aspx" />
+    <Content Include="HrManager\PlanWorkAuditing.aspx" />
+    <Content Include="HrManager\PlanWorkRecord.aspx" />
+    <Content Include="HrManager\UserAttendance.aspx" />
+    <Content Include="HrManager\UserInfo.aspx" />
+    <Content Include="HrManager\WorkOvertimeAuditing.aspx" />
+    <Content Include="HrManager\WorkOvertimeHistory.aspx" />
+    <Content Include="Image\login\Thumbs.db" />
+    <Content Include="Ashx\User\UserHandler.ashx" />
+    <Content Include="Ashx\User\AddUserHandler.ashx" />
+    <Content Include="Ashx\Attendance\UserAttendanceHandler.ashx" />
+    <Content Include="Ashx\Attendance\AttendanceCheckHandler.ashx" />
+    <Content Include="Ashx\Holiday\HolidayAuditingHandler.ashx" />
+    <Content Include="Ashx\Holiday\HolidayHistoryHandler.ashx" />
+    <Content Include="Ashx\User\GetBusinessListHandler.ashx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Blank.cep" />
+    <Content Include="CuteSoft_Client\CuteEditor\Configuration\AutoConfigure\Compact.config" />
+    <Content Include="CuteSoft_Client\CuteEditor\Configuration\AutoConfigure\Default.config" />
+    <Content Include="CuteSoft_Client\CuteEditor\Configuration\AutoConfigure\Full.config" />
+    <Content Include="CuteSoft_Client\CuteEditor\Configuration\AutoConfigure\Full_noform.config" />
+    <Content Include="CuteSoft_Client\CuteEditor\Configuration\AutoConfigure\Minimal.config" />
+    <Content Include="CuteSoft_Client\CuteEditor\Configuration\AutoConfigure\MyTool.config" />
+    <Content Include="CuteSoft_Client\CuteEditor\Configuration\AutoConfigure\None.config" />
+    <Content Include="CuteSoft_Client\CuteEditor\Configuration\AutoConfigure\Sample.config" />
+    <Content Include="CuteSoft_Client\CuteEditor\Configuration\AutoConfigure\Simple.config" />
+    <Content Include="CuteSoft_Client\CuteEditor\Configuration\ContextMenuMode\Compact.config" />
+    <Content Include="CuteSoft_Client\CuteEditor\Configuration\ContextMenuMode\Default.config" />
+    <Content Include="CuteSoft_Client\CuteEditor\Configuration\ContextMenuMode\Full.config" />
+    <Content Include="CuteSoft_Client\CuteEditor\Configuration\ContextMenuMode\Full_noform.config" />
+    <Content Include="CuteSoft_Client\CuteEditor\Configuration\ContextMenuMode\Minimal.config" />
+    <Content Include="CuteSoft_Client\CuteEditor\Configuration\ContextMenuMode\None.config" />
+    <Content Include="CuteSoft_Client\CuteEditor\Configuration\ContextMenuMode\Simple.config" />
+    <Content Include="CuteSoft_Client\CuteEditor\Configuration\Security\Admin.config" />
+    <Content Include="CuteSoft_Client\CuteEditor\Configuration\Security\Default.config" />
+    <Content Include="CuteSoft_Client\CuteEditor\Configuration\Security\Guest.config" />
+    <Content Include="CuteSoft_Client\CuteEditor\Configuration\Shared\Common.config" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Load.ashx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\tag.config" />
+    <Content Include="CuteSoft_Client\CuteEditor\Dialogs\Web.config" />
+    <Content Include="CuteSoft_Client\CuteEditor\Editor.cep" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\imageeditorTest.zip" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\TempFiles\1fd5e13c-9063-4992-bc54-66b5f14285c8000001-.tmp" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\TempFiles\38db0cc7-e6bc-4619-8c34-994519a0eaf0000001-.tmp" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\TempFiles\4b94b234-9d8f-418f-b030-cb23f5b18cbe000001-.tmp" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\TempFiles\676646c9-5aab-483f-a8a0-7d8b8707a02b000001-.tmp" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\TempFiles\860173e3-4346-435d-a481-a04bc4cea4b7000001-.tmp" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\TempFiles\875ed758-85c1-4106-ad88-008aacf79ddf000001-.tmp" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\TempFiles\fb36ebd2-ef7d-4e27-affa-2671be4dcdf3000001.tmp" />
+    <Content Include="CuteSoft_Client\CuteEditor\ImageEditor\TempFiles\fb36ebd2-ef7d-4e27-affa-2671be4dcdf3000002-.tmp" />
+    <Content Include="CuteSoft_Client\CuteEditor\Load.ashx" />
+    <Content Include="CuteSoft_Client\CuteEditor\Uploader.ashx" />
+    <Content Include="CuteSoft_Client\Web.config" />
+    <Content Include="Ashx\Holiday\GetHolidayByATIDHandler.ashx" />
+    <Content Include="Ashx\WorkOvertime\WorkOvertimeListHandler.ashx" />
+    <Content Include="Ashx\WorkOvertime\WorkOvertimeHistoryHandler.ashx" />
+    <Content Include="Ashx\Attendance\GetUserAttendanceHandler.ashx" />
+    <Content Include="Ashx\Attendance\SearchAttendanceHandler.ashx" />
+    <Content Include="Ashx\DelNewKmployeeKnow.ashx" />
+    <Content Include="Ashx\Holiday\HolidayAuditedHandler.ashx" />
+    <Content Include="Ashx\Holiday\HolidayHistorySearchHandler.ashx" />
+    <Content Include="Ashx\WorkOvertime\WorkOvertimeAuditedHandler.ashx" />
+    <Content Include="Ashx\WorkOvertime\WorkOvertimeSearchHandler.ashx" />
+    <Content Include="Ashx\User\GetUserByAuthortyHandler.ashx" />
+    <Content Include="Ashx\Authority\ModifyAuthorityHandler.ashx" />
+    <Content Include="Ashx\Authority\GetAuthorityByUsIDHandler.ashx" />
+    <Content Include="Ashx\Holiday\HolidayHistoryExportHandler.ashx" />
+    <Content Include="Ashx\WorkOvertime\WorkOvertimeExportHandler.ashx" />
+    <Content Include="Ashx\Attendance\GetAttendanceDayHandler.ashx" />
+    <Content Include="Ashx\Attendance\GetAttendanceTimeHandler.ashx" />
+    <Content Include="Ashx\File\GetProjectNameHandler.ashx" />
+    <Content Include="Ashx\File\GetFileListByBusIDHandler.ashx" />
+    <Content Include="Ashx\User\GetLoginUserHandler.ashx" />
+    <Content Include="Ashx\File\GetFileClassExplicitHandler.ashx" />
+    <Content Include="Ashx\File\GetFileListByFceIDHandler.ashx" />
+    <Content Include="Ashx\File\GetMeetListHandler.ashx" />
+    <Content Include="Ashx\File\GetFileListByFcIDHandler.ashx" />
+    <Content Include="Ashx\File\DownLoadFileByFileIDHandler.ashx" />
+    <Content Include="Ashx\File\DownLoadSummaryByMsIDHandler.ashx" />
+    <Content Include="Ashx\File\GetProjectNameListHandler.ashx" />
+    <Content Include="Ashx\File\GetFileListByFceIDHrefHandler.ashx" />
+    <Content Include="Notice\AddNotice.aspx" />
+    <Content Include="Notice\NoticeList.aspx" />
+    <Content Include="Notice\NoticeShow.aspx" />
+    <Content Include="StoreHouse\ApplyArticle.aspx" />
+    <Content Include="StoreHouse\CheckApplyRecord.aspx" />
+    <Content Include="StoreHouse\EnteringHouse.aspx" />
+    <Content Include="StoreHouse\PutOut.aspx" />
+    <Content Include="StoreHouse\ReplyApply.aspx" />
+    <Content Include="StoreHouse\ReturnArticle.aspx" />
+    <Content Include="StoreHouse\StoreHouseList.aspx" />
+    <Content Include="WorkPlan\AddDuty.aspx" />
+    <Content Include="WorkPlan\AddPlan.aspx" />
+    <Content Include="WorkPlan\DutyTable.aspx" />
+    <Content Include="WorkPlan\MyPlan.aspx" />
+    <Content Include="WorkPlan\PlanList.aspx" />
+    <Content Include="WorkPlan\PlanOnlyShow.aspx" />
+    <Content Include="WorkPlan\PlanShow.aspx" />
+    <Content Include="Ashx\Table\GetKeepWatchListHandler.ashx" />
+    <Content Include="Ashx\Plan\DownLoadFileByWpIDHandler.ashx" />
+    <Content Include="Ashx\Table\DownLoadFileByKwIDHandler.ashx" />
+    <Content Include="Ashx\Table\SearchDutyListHandler.ashx" />
+    <Content Include="Ashx\Notice\GetNoticeListHandler.ashx" />
+    <Content Include="Ashx\Notice\DownLoadFileByNoIDHandler.ashx" />
+    <Content Include="Ashx\Plan\CreateWorkPlanHandler.ashx" />
+    <Content Include="Ashx\Plan\GetWorkPlanInfoByWpIDHandler.ashx" />
+    <Content Include="Ashx\Plan\CreateWorkPlanInfoHandler.ashx" />
+    <Content Include="Ashx\Plan\GetWPIContentHandler.ashx" />
+    <Content Include="Ashx\Plan\DelWPIContentHandler.ashx" />
+    <Content Include="Ashx\Plan\GetPlanListByUserIDHandler.ashx" />
+    <Content Include="Ashx\Plan\GetPlanListByUserAuthorityHandler.ashx" />
+    <Content Include="Ashx\Plan\SearchPlanByUsIDHandler.ashx" />
+    <Content Include="Ashx\Plan\SearchPlanHandler.ashx" />
+    <Content Include="Ashx\Plan\GetPlanOneByWpidHandler.ashx" />
+    <Content Include="Ashx\StoreHouse\GetStoreHouseListHandler.ashx" />
+    <Content Include="Ashx\StoreHouse\AddStoreHouseHandler.ashx" />
+    <Content Include="Ashx\StoreHouse\SearchStoreHouseByNameHandler.ashx" />
+    <Content Include="Ashx\StoreHouse\CheckInStoreHandler.ashx" />
+    <Content Include="Ashx\StoreHouse\GetUserApplyByUsIDHandler.ashx" />
+    <Content Include="Ashx\StoreHouse\GetShopNameByClassIDHandler.ashx" />
+    <Content Include="Ashx\StoreHouse\GetUnitByShopIDHandler.ashx" />
+    <Content Include="Ashx\StoreHouse\AddApplyHandler.ashx" />
+    <Content Include="Ashx\StoreHouse\GetUserReplyApplyListHandler.ashx" />
+    <Content Include="Ashx\StoreHouse\SubmitJudeApplyHandler.ashx" />
+    <Content Include="Ashx\StoreHouse\GetUserPutOutListHandler.ashx" />
+    <Content Include="Ashx\StoreHouse\GetUserReturnListHandler.ashx" />
+    <Content Include="Ashx\StoreHouse\PutOutStoreHandler.ashx" />
+    <Content Include="Ashx\StoreHouse\ReturnStoreHandler.ashx" />
+    <Content Include="Ashx\StoreHouse\KeepStoreHandler.ashx" />
+    <Content Include="Ashx\StoreHouse\GetPutInRecodHandler.ashx" />
+    <Content Include="Ashx\StoreHouse\GetApplyRecodHandler.ashx" />
+    <Content Include="Ashx\StoreHouse\GetSearchEnterHouseRecodHandler.ashx" />
+    <Content Include="Ashx\StoreHouse\DownLoadSearchEnterHouseRecodHandler.ashx" />
+    <Content Include="Ashx\StoreHouse\GetSearchPutOutRecodHandler.ashx" />
+    <Content Include="Ashx\StoreHouse\DownLoadSearchPutOutRecodHandler.ashx" />
+    <Content Include="Ashx\Attendance\GetPlanWrkListHandler.ashx" />
+    <Content Include="Ashx\Attendance\CreatePlanWorkHandler.ashx" />
+    <Content Include="Ashx\Attendance\GetPlanWrokHandler.ashx" />
+    <Content Include="Ashx\Attendance\CreatePlanWorkInfoHandler.ashx" />
+    <Content Include="Ashx\Attendance\GetPlanWorkInfoByWpIDHandler.ashx" />
+    <Content Include="Ashx\Attendance\DelPWIContentHandler.ashx" />
+    <Content Include="Ashx\Attendance\GetPlanWrokAuditingListHandler.ashx" />
+    <Content Include="Ashx\Attendance\PlanWorkAuditByPwidHandler.ashx" />
+    <Content Include="Ashx\Attendance\ResetPlanWorkApplyHandler.ashx" />
+    <Content Include="Ashx\Attendance\GetPlanWorkRecordHandler.ashx" />
+    <Content Include="Ashx\Attendance\SearchPlanWorkRecordHandler.ashx" />
+    <Content Include="Ashx\Attendance\ExportPlanWorkRecordHandler.ashx" />
+    <Content Include="Ashx\Attendance\GetHolidayListHandler.ashx" />
+    <Content Include="Ashx\Attendance\UserHolidaySettingByUsIDHandler.ashx" />
+    <Content Include="Ashx\Time\Time.ashx" />
+    <None Include="Properties\PublishProfiles\OAS.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Css\comm.css" />
+    <Content Include="Css\default\accordion.css" />
+    <Content Include="Css\default\calendar.css" />
+    <Content Include="Css\default\combo.css" />
+    <Content Include="Css\default\combobox.css" />
+    <Content Include="Css\default\datagrid.css" />
+    <Content Include="Css\default\datebox.css" />
+    <Content Include="Css\default\dialog.css" />
+    <Content Include="Css\default\easyui.css" />
+    <Content Include="Css\default\images\accordion_arrows.png" />
+    <Content Include="Css\default\images\blank.gif" />
+    <Content Include="Css\default\images\calendar_arrows.png" />
+    <Content Include="Css\default\images\combo_arrow.png" />
+    <Content Include="Css\default\images\datagrid_icons.png" />
+    <Content Include="Css\default\images\datebox_arrow.png" />
+    <Content Include="Css\default\images\layout_arrows.png" />
+    <Content Include="Css\default\images\linkbutton_bg.png" />
+    <Content Include="Css\default\images\loading.gif" />
+    <Content Include="Css\default\images\menu_arrows.png" />
+    <Content Include="Css\default\images\messager_icons.png" />
+    <Content Include="Css\default\images\pagination_icons.png" />
+    <Content Include="Css\default\images\panel_tools.png" />
+    <Content Include="Css\default\images\searchbox_button.png" />
+    <Content Include="Css\default\images\slider_handle.png" />
+    <Content Include="Css\default\images\spinner_arrows.png" />
+    <Content Include="Css\default\images\tabs_icons.png" />
+    <Content Include="Css\default\images\tree_icons.png" />
+    <Content Include="Css\default\images\validatebox_warning.png" />
+    <Content Include="Css\default\layout.css" />
+    <Content Include="Css\default\linkbutton.css" />
+    <Content Include="Css\default\menu.css" />
+    <Content Include="Css\default\menubutton.css" />
+    <Content Include="Css\default\messager.css" />
+    <Content Include="Css\default\pagination.css" />
+    <Content Include="Css\default\panel.css" />
+    <Content Include="Css\default\progressbar.css" />
+    <Content Include="Css\default\propertygrid.css" />
+    <Content Include="Css\default\searchbox.css" />
+    <Content Include="Css\default\slider.css" />
+    <Content Include="Css\default\spinner.css" />
+    <Content Include="Css\default\splitbutton.css" />
+    <Content Include="Css\default\tabs.css" />
+    <Content Include="Css\default\tooltip.css" />
+    <Content Include="Css\default\tree.css" />
+    <Content Include="Css\default\validatebox.css" />
+    <Content Include="Css\default\window.css" />
+    <Content Include="Css\icon.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Image\login\bg.gif" />
+    <Content Include="Image\login\btnlogin.gif" />
+    <Content Include="Image\login\code.gif" />
+    <Content Include="Image\login\login_01.gif" />
+    <Content Include="Image\login\login_02.gif" />
+    <Content Include="Image\login\login_03.gif" />
+    <Content Include="Image\login\login_04.gif" />
+    <Content Include="Image\login\login_05.gif" />
+    <Content Include="Image\login\login_06.gif" />
+    <Content Include="Image\login\login_07.gif" />
+    <Content Include="Image\login\login_08.gif" />
+    <Content Include="Image\login\login_09.gif" />
+    <Content Include="Image\login\login_10.gif" />
+    <Content Include="Image\login\login_11.gif" />
+    <Content Include="Image\login\login_12.gif" />
+    <Content Include="Image\login\login_13.gif" />
+    <Content Include="Image\login\login_14.gif" />
+    <Content Include="Image\login\logo.gif" />
+    <Content Include="Image\login\txt.gif" />
+    <Content Include="Index.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Script\jquery.easyui.min.js" />
+    <Content Include="Script\jquery.min.js" />
+    <Content Include="Test.aspx" />
+    <Content Include="Test.html" />
+    <Content Include="UserManager\ModifyPwd.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ashx\Attendance\CreatePlanWorkHandler.ashx.cs">
+      <DependentUpon>CreatePlanWorkHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Attendance\CreatePlanWorkInfoHandler.ashx.cs">
+      <DependentUpon>CreatePlanWorkInfoHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Attendance\DelPWIContentHandler.ashx.cs">
+      <DependentUpon>DelPWIContentHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Attendance\ExportPlanWorkRecordHandler.ashx.cs">
+      <DependentUpon>ExportPlanWorkRecordHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Attendance\GetHolidayListHandler.ashx.cs">
+      <DependentUpon>GetHolidayListHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Attendance\GetPlanWorkInfoByWpIDHandler.ashx.cs">
+      <DependentUpon>GetPlanWorkInfoByWpIDHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Attendance\GetPlanWorkRecordHandler.ashx.cs">
+      <DependentUpon>GetPlanWorkRecordHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Attendance\GetPlanWrkListHandler.ashx.cs">
+      <DependentUpon>GetPlanWrkListHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Attendance\GetPlanWrokAuditingListHandler.ashx.cs">
+      <DependentUpon>GetPlanWrokAuditingListHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Attendance\GetPlanWrokHandler.ashx.cs">
+      <DependentUpon>GetPlanWrokHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Attendance\PlanWorkAuditByPwidHandler.ashx.cs">
+      <DependentUpon>PlanWorkAuditByPwidHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Attendance\ResetPlanWorkApplyHandler.ashx.cs">
+      <DependentUpon>ResetPlanWorkApplyHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Attendance\SearchPlanWorkRecordHandler.ashx.cs">
+      <DependentUpon>SearchPlanWorkRecordHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Attendance\UserHolidaySettingByUsIDHandler.ashx.cs">
+      <DependentUpon>UserHolidaySettingByUsIDHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\File\DownLoadFileByFileIDHandler.ashx.cs">
+      <DependentUpon>DownLoadFileByFileIDHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\File\DownLoadSummaryByMsIDHandler.ashx.cs">
+      <DependentUpon>DownLoadSummaryByMsIDHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\File\GetFileClassExplicitHandler.ashx.cs">
+      <DependentUpon>GetFileClassExplicitHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\File\GetFileListByBusIDHandler.ashx.cs">
+      <DependentUpon>GetFileListByBusIDHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\File\GetFileListByFceIDHandler.ashx.cs">
+      <DependentUpon>GetFileListByFceIDHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\File\GetFileListByFceIDHrefHandler.ashx.cs">
+      <DependentUpon>GetFileListByFceIDHrefHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\File\GetFileListByFcIDHandler.ashx.cs">
+      <DependentUpon>GetFileListByFcIDHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\File\GetMeetListHandler.ashx.cs">
+      <DependentUpon>GetMeetListHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\File\GetProjectNameHandler.ashx.cs">
+      <DependentUpon>GetProjectNameHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\File\GetProjectNameListHandler.ashx.cs">
+      <DependentUpon>GetProjectNameListHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Notice\DownLoadFileByNoIDHandler.ashx.cs">
+      <DependentUpon>DownLoadFileByNoIDHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Notice\GetNoticeListHandler.ashx.cs">
+      <DependentUpon>GetNoticeListHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Plan\CreateWorkPlanHandler.ashx.cs">
+      <DependentUpon>CreateWorkPlanHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Plan\CreateWorkPlanInfoHandler.ashx.cs">
+      <DependentUpon>CreateWorkPlanInfoHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Plan\DelWPIContentHandler.ashx.cs">
+      <DependentUpon>DelWPIContentHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Plan\DownLoadFileByWpIDHandler.ashx.cs">
+      <DependentUpon>DownLoadFileByWpIDHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Plan\GetPlanByWPIDHandler.ashx.cs">
+      <DependentUpon>GetPlanByWPIDHandler.ashx</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Ashx\Plan\GetPlanListByUserAuthorityHandler.ashx.cs">
+      <DependentUpon>GetPlanListByUserAuthorityHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Plan\GetPlanListByUserIDHandler.ashx.cs">
+      <DependentUpon>GetPlanListByUserIDHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Plan\GetPlanOneByWpidHandler.ashx.cs">
+      <DependentUpon>GetPlanOneByWpidHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Plan\GetWorkPlanInfoByWpIDHandler.ashx.cs">
+      <DependentUpon>GetWorkPlanInfoByWpIDHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Plan\GetWPIContentHandler.ashx.cs">
+      <DependentUpon>GetWPIContentHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Plan\SearchPlanByUsIDHandler.ashx.cs">
+      <DependentUpon>SearchPlanByUsIDHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Plan\SearchPlanHandler.ashx.cs">
+      <DependentUpon>SearchPlanHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\StoreHouse\AddApplyHandler.ashx.cs">
+      <DependentUpon>AddApplyHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\StoreHouse\AddStoreHouseHandler.ashx.cs">
+      <DependentUpon>AddStoreHouseHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\StoreHouse\CheckInStoreHandler.ashx.cs">
+      <DependentUpon>CheckInStoreHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\StoreHouse\DownLoadSearchEnterHouseRecodHandler.ashx.cs">
+      <DependentUpon>DownLoadSearchEnterHouseRecodHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\StoreHouse\DownLoadSearchPutOutRecodHandler.ashx.cs">
+      <DependentUpon>DownLoadSearchPutOutRecodHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\StoreHouse\GetApplyRecodHandler.ashx.cs">
+      <DependentUpon>GetApplyRecodHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\StoreHouse\GetPutInRecodHandler.ashx.cs">
+      <DependentUpon>GetPutInRecodHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\StoreHouse\GetSearchEnterHouseRecodHandler.ashx.cs">
+      <DependentUpon>GetSearchEnterHouseRecodHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\StoreHouse\GetSearchPutOutRecodHandler.ashx.cs">
+      <DependentUpon>GetSearchPutOutRecodHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\StoreHouse\GetShopNameByClassIDHandler.ashx.cs">
+      <DependentUpon>GetShopNameByClassIDHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\StoreHouse\GetStoreHouseListHandler.ashx.cs">
+      <DependentUpon>GetStoreHouseListHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\StoreHouse\GetUnitByShopIDHandler.ashx.cs">
+      <DependentUpon>GetUnitByShopIDHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\StoreHouse\GetUserApplyByUsIDHandler.ashx.cs">
+      <DependentUpon>GetUserApplyByUsIDHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\StoreHouse\GetUserPutOutListHandler.ashx.cs">
+      <DependentUpon>GetUserPutOutListHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\StoreHouse\GetUserReplyApplyListHandler.ashx.cs">
+      <DependentUpon>GetUserReplyApplyListHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\StoreHouse\GetUserReturnListHandler.ashx.cs">
+      <DependentUpon>GetUserReturnListHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\StoreHouse\KeepStoreHandler.ashx.cs">
+      <DependentUpon>KeepStoreHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\StoreHouse\PutOutStoreHandler.ashx.cs">
+      <DependentUpon>PutOutStoreHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\StoreHouse\ReturnStoreHandler.ashx.cs">
+      <DependentUpon>ReturnStoreHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\StoreHouse\SearchStoreHouseByNameHandler.ashx.cs">
+      <DependentUpon>SearchStoreHouseByNameHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\StoreHouse\SubmitJudeApplyHandler.ashx.cs">
+      <DependentUpon>SubmitJudeApplyHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Table\DownLoadFileByKwIDHandler.ashx.cs">
+      <DependentUpon>DownLoadFileByKwIDHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Table\GetKeepWatchListHandler.ashx.cs">
+      <DependentUpon>GetKeepWatchListHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Table\SearchDutyListHandler.ashx.cs">
+      <DependentUpon>SearchDutyListHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Time\Time.ashx.cs">
+      <DependentUpon>Time.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\User\AddUserHandler.ashx.cs">
+      <DependentUpon>AddUserHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Attendance\AttendanceCheckHandler.ashx.cs">
+      <DependentUpon>AttendanceCheckHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Attendance\GetAttendanceDayHandler.ashx.cs">
+      <DependentUpon>GetAttendanceDayHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Attendance\GetAttendanceTimeHandler.ashx.cs">
+      <DependentUpon>GetAttendanceTimeHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Attendance\GetUserAttendanceHandler.ashx.cs">
+      <DependentUpon>GetUserAttendanceHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Attendance\SearchAttendanceHandler.ashx.cs">
+      <DependentUpon>SearchAttendanceHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Authority\GetAuthorityByUsIDHandler.ashx.cs">
+      <DependentUpon>GetAuthorityByUsIDHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Authority\ModifyAuthorityHandler.ashx.cs">
+      <DependentUpon>ModifyAuthorityHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\DelNewKmployeeKnow.ashx.cs">
+      <DependentUpon>DelNewKmployeeKnow.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\User\GetBusinessListHandler.ashx.cs">
+      <DependentUpon>GetBusinessListHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Holiday\HolidayAuditedHandler.ashx.cs">
+      <DependentUpon>HolidayAuditedHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Holiday\HolidayAuditingHandler.ashx.cs">
+      <DependentUpon>HolidayAuditingHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Holiday\HolidayHistoryExportHandler.ashx.cs">
+      <DependentUpon>HolidayHistoryExportHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Holiday\HolidayHistoryHandler.ashx.cs">
+      <DependentUpon>HolidayHistoryHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Holiday\GetHolidayByATIDHandler.ashx.cs">
+      <DependentUpon>GetHolidayByATIDHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Holiday\HolidayHistorySearchHandler.ashx.cs">
+      <DependentUpon>HolidayHistorySearchHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\Attendance\UserAttendanceHandler.ashx.cs">
+      <DependentUpon>UserAttendanceHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\User\GetLoginUserHandler.ashx.cs">
+      <DependentUpon>GetLoginUserHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\User\GetUserByAuthortyHandler.ashx.cs">
+      <DependentUpon>GetUserByAuthortyHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\User\UserHandler.ashx.cs">
+      <DependentUpon>UserHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\WorkOvertime\WorkOvertimeAuditedHandler.ashx.cs">
+      <DependentUpon>WorkOvertimeAuditedHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\WorkOvertime\WorkOvertimeExportHandler.ashx.cs">
+      <DependentUpon>WorkOvertimeExportHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\WorkOvertime\WorkOvertimeHistoryHandler.ashx.cs">
+      <DependentUpon>WorkOvertimeHistoryHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\WorkOvertime\WorkOvertimeListHandler.ashx.cs">
+      <DependentUpon>WorkOvertimeListHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ashx\WorkOvertime\WorkOvertimeSearchHandler.ashx.cs">
+      <DependentUpon>WorkOvertimeSearchHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="common\verify_code.aspx.cs">
+      <DependentUpon>verify_code.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="common\verify_code.aspx.designer.cs">
+      <DependentUpon>verify_code.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileManager\AddImportant.aspx.cs">
+      <DependentUpon>AddImportant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileManager\AddImportant.aspx.designer.cs">
+      <DependentUpon>AddImportant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileManager\AddStandard.aspx.cs">
+      <DependentUpon>AddStandard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileManager\AddStandard.aspx.designer.cs">
+      <DependentUpon>AddStandard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileManager\Standard.aspx.cs">
+      <DependentUpon>Standard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileManager\Standard.aspx.designer.cs">
+      <DependentUpon>Standard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileManager\StandardList.aspx.cs">
+      <DependentUpon>StandardList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileManager\StandardList.aspx.designer.cs">
+      <DependentUpon>StandardList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileManager\StandardShow.aspx.cs">
+      <DependentUpon>StandardShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileManager\StandardShow.aspx.designer.cs">
+      <DependentUpon>StandardShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HrManager\AddPlanWrok.aspx.cs">
+      <DependentUpon>AddPlanWrok.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HrManager\AddPlanWrok.aspx.designer.cs">
+      <DependentUpon>AddPlanWrok.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HrManager\HolidayManager.aspx.cs">
+      <DependentUpon>HolidayManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HrManager\HolidayManager.aspx.designer.cs">
+      <DependentUpon>HolidayManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HrManager\MdyPlanWrok.aspx.cs">
+      <DependentUpon>MdyPlanWrok.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HrManager\MdyPlanWrok.aspx.designer.cs">
+      <DependentUpon>MdyPlanWrok.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HrManager\PlanWorkApply.aspx.cs">
+      <DependentUpon>PlanWorkApply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HrManager\PlanWorkApply.aspx.designer.cs">
+      <DependentUpon>PlanWorkApply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HrManager\PlanWorkAudited.aspx.cs">
+      <DependentUpon>PlanWorkAudited.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HrManager\PlanWorkAudited.aspx.designer.cs">
+      <DependentUpon>PlanWorkAudited.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HrManager\PlanWorkAuditing.aspx.cs">
+      <DependentUpon>PlanWorkAuditing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HrManager\PlanWorkAuditing.aspx.designer.cs">
+      <DependentUpon>PlanWorkAuditing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HrManager\PlanWorkRecord.aspx.cs">
+      <DependentUpon>PlanWorkRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HrManager\PlanWorkRecord.aspx.designer.cs">
+      <DependentUpon>PlanWorkRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Notice\AddNotice.aspx.cs">
+      <DependentUpon>AddNotice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notice\AddNotice.aspx.designer.cs">
+      <DependentUpon>AddNotice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Notice\NoticeList.aspx.cs">
+      <DependentUpon>NoticeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notice\NoticeList.aspx.designer.cs">
+      <DependentUpon>NoticeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Notice\NoticeShow.aspx.cs">
+      <DependentUpon>NoticeShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notice\NoticeShow.aspx.designer.cs">
+      <DependentUpon>NoticeShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreHouse\ApplyArticle.aspx.cs">
+      <DependentUpon>ApplyArticle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreHouse\ApplyArticle.aspx.designer.cs">
+      <DependentUpon>ApplyArticle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreHouse\CheckApplyRecord.aspx.cs">
+      <DependentUpon>CheckApplyRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreHouse\CheckApplyRecord.aspx.designer.cs">
+      <DependentUpon>CheckApplyRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreHouse\EnteringHouse.aspx.cs">
+      <DependentUpon>EnteringHouse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreHouse\EnteringHouse.aspx.designer.cs">
+      <DependentUpon>EnteringHouse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreHouse\PutOut.aspx.cs">
+      <DependentUpon>PutOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreHouse\PutOut.aspx.designer.cs">
+      <DependentUpon>PutOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreHouse\ReplyApply.aspx.cs">
+      <DependentUpon>ReplyApply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreHouse\ReplyApply.aspx.designer.cs">
+      <DependentUpon>ReplyApply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreHouse\ReturnArticle.aspx.cs">
+      <DependentUpon>ReturnArticle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreHouse\ReturnArticle.aspx.designer.cs">
+      <DependentUpon>ReturnArticle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StoreHouse\StoreHouseList.aspx.cs">
+      <DependentUpon>StoreHouseList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreHouse\StoreHouseList.aspx.designer.cs">
+      <DependentUpon>StoreHouseList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserClass\ImageHelper.cs" />
+    <Compile Include="Control\ButtonCtrl.ascx.cs">
+      <DependentUpon>ButtonCtrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\ButtonCtrl.ascx.designer.cs">
+      <DependentUpon>ButtonCtrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Control\GetViCode.aspx.cs">
+      <DependentUpon>GetViCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control\GetViCode.aspx.designer.cs">
+      <DependentUpon>GetViCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileManager\AddAndMeet.aspx.cs">
+      <DependentUpon>AddAndMeet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileManager\AddAndMeet.aspx.designer.cs">
+      <DependentUpon>AddAndMeet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileManager\AddReport.aspx.cs">
+      <DependentUpon>AddReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileManager\AddReport.aspx.designer.cs">
+      <DependentUpon>AddReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileManager\AddTechnical.aspx.cs">
+      <DependentUpon>AddTechnical.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileManager\AddTechnical.aspx.designer.cs">
+      <DependentUpon>AddTechnical.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileManager\Important.aspx.cs">
+      <DependentUpon>Important.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileManager\Important.aspx.designer.cs">
+      <DependentUpon>Important.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileManager\ImportantShow.aspx.cs">
+      <DependentUpon>ImportantShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileManager\ImportantShow.aspx.designer.cs">
+      <DependentUpon>ImportantShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileManager\MeetShow.aspx.cs">
+      <DependentUpon>MeetShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileManager\MeetShow.aspx.designer.cs">
+      <DependentUpon>MeetShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileManager\MeetSummary.aspx.cs">
+      <DependentUpon>MeetSummary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileManager\MeetSummary.aspx.designer.cs">
+      <DependentUpon>MeetSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileManager\Technical.aspx.cs">
+      <DependentUpon>Technical.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileManager\Technical.aspx.designer.cs">
+      <DependentUpon>Technical.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileManager\TechnicalList.aspx.cs">
+      <DependentUpon>TechnicalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileManager\TechnicalList.aspx.designer.cs">
+      <DependentUpon>TechnicalList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileManager\WeeklyReport.aspx.cs">
+      <DependentUpon>WeeklyReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileManager\WeeklyReport.aspx.designer.cs">
+      <DependentUpon>WeeklyReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileManager\WeeklyReportList.aspx.cs">
+      <DependentUpon>WeeklyReportList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileManager\WeeklyReportList.aspx.designer.cs">
+      <DependentUpon>WeeklyReportList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HrManager\AddressList.aspx.cs">
+      <DependentUpon>AddressList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HrManager\AddressList.aspx.designer.cs">
+      <DependentUpon>AddressList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HrManager\AttendanceCheck.aspx.cs">
+      <DependentUpon>AttendanceCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HrManager\AttendanceCheck.aspx.designer.cs">
+      <DependentUpon>AttendanceCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HrManager\AuthorityManager.aspx.cs">
+      <DependentUpon>AuthorityManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HrManager\AuthorityManager.aspx.designer.cs">
+      <DependentUpon>AuthorityManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HrManager\HolidayAuditing.aspx.cs">
+      <DependentUpon>HolidayAuditing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HrManager\HolidayAuditing.aspx.designer.cs">
+      <DependentUpon>HolidayAuditing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HrManager\HolidayHistory.aspx.cs">
+      <DependentUpon>HolidayHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HrManager\HolidayHistory.aspx.designer.cs">
+      <DependentUpon>HolidayHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HrManager\NewEmployeeKnowAdd.aspx.cs">
+      <DependentUpon>NewEmployeeKnowAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HrManager\NewEmployeeKnowAdd.aspx.designer.cs">
+      <DependentUpon>NewEmployeeKnowAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HrManager\NewEmployeeKnowGroup.aspx.cs">
+      <DependentUpon>NewEmployeeKnowGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HrManager\NewEmployeeKnowGroup.aspx.designer.cs">
+      <DependentUpon>NewEmployeeKnowGroup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HrManager\NewEmployeeShow.aspx.cs">
+      <DependentUpon>NewEmployeeShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HrManager\NewEmployeeShow.aspx.designer.cs">
+      <DependentUpon>NewEmployeeShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HrManager\UserAttendance.aspx.cs">
+      <DependentUpon>UserAttendance.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HrManager\UserAttendance.aspx.designer.cs">
+      <DependentUpon>UserAttendance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HrManager\UserInfo.aspx.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HrManager\UserInfo.aspx.designer.cs">
+      <DependentUpon>UserInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HrManager\WorkOvertimeAuditing.aspx.cs">
+      <DependentUpon>WorkOvertimeAuditing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HrManager\WorkOvertimeAuditing.aspx.designer.cs">
+      <DependentUpon>WorkOvertimeAuditing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HrManager\WorkOvertimeHistory.aspx.cs">
+      <DependentUpon>WorkOvertimeHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HrManager\WorkOvertimeHistory.aspx.designer.cs">
+      <DependentUpon>WorkOvertimeHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserManager\ModifyPwd.aspx.cs">
+      <DependentUpon>ModifyPwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManager\ModifyPwd.aspx.designer.cs">
+      <DependentUpon>ModifyPwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkPlan\AddDuty.aspx.cs">
+      <DependentUpon>AddDuty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkPlan\AddDuty.aspx.designer.cs">
+      <DependentUpon>AddDuty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkPlan\AddPlan.aspx.cs">
+      <DependentUpon>AddPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkPlan\AddPlan.aspx.designer.cs">
+      <DependentUpon>AddPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkPlan\DutyTable.aspx.cs">
+      <DependentUpon>DutyTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkPlan\DutyTable.aspx.designer.cs">
+      <DependentUpon>DutyTable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkPlan\MyPlan.aspx.cs">
+      <DependentUpon>MyPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkPlan\MyPlan.aspx.designer.cs">
+      <DependentUpon>MyPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkPlan\PlanList.aspx.cs">
+      <DependentUpon>PlanList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkPlan\PlanList.aspx.designer.cs">
+      <DependentUpon>PlanList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkPlan\PlanOnlyShow.aspx.cs">
+      <DependentUpon>PlanOnlyShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkPlan\PlanOnlyShow.aspx.designer.cs">
+      <DependentUpon>PlanOnlyShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WorkPlan\PlanShow.aspx.cs">
+      <DependentUpon>PlanShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkPlan\PlanShow.aspx.designer.cs">
+      <DependentUpon>PlanShow.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="ExportEecel\" />
+    <Folder Include="ExportFile\" />
+    <Folder Include="uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{68fa0fa5-2fee-4868-a9ce-9c314623c906}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MDL\MDL.csproj">
+      <Project>{4fa4658d-31d9-4b80-860a-4d8450bead8d}</Project>
+      <Name>MDL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>10791</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:10731/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

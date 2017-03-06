@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="verify_code.aspx.cs" Inherits="DnaFramework.Web.manage.common.verify_code" %>

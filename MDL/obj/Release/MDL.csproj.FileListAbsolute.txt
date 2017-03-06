@@ -1,0 +1,5 @@
+D:\Project\统一办公平台\源代码\OASys\MDL\bin\Release\MDL.dll
+D:\Project\统一办公平台\源代码\OASys\MDL\bin\Release\MDL.pdb
+D:\Project\统一办公平台\源代码\OASys\MDL\obj\Release\MDL.csprojResolveAssemblyReference.cache
+D:\Project\统一办公平台\源代码\OASys\MDL\obj\Release\MDL.dll
+D:\Project\统一办公平台\源代码\OASys\MDL\obj\Release\MDL.pdb
